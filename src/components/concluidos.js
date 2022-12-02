@@ -1,8 +1,8 @@
 
 export default function Concluido(props){
     return(
-        <div className="footer-concluidos">
-            {props.contador}/8 concluidos
+        <div data-test = "footer" className="footer-concluidos">
+            {props.cont}/{props.cards.length} concluidos
         </div>
     )
 }

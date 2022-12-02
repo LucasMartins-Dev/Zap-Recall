@@ -131,3 +131,15 @@
   bottom: 10px;
   right: 10px;
 }
+.red{
+  text-decoration: line-through;
+  text-decoration-color: #FF3030;
+}
+.yellow{
+  text-decoration: line-through;
+  text-decoration-color: #FF922E;
+}
+.green{
+  text-decoration: line-through;
+  text-decoration-color: #2FBE34;
+}
