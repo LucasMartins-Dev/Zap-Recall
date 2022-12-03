@@ -71,12 +71,12 @@ export default function Card (props){
     }
     const cores =[{test:'no-btn',funct:cardred ,name:'Não lembrei', color:'#FF3030'},{test:'partial-btn',funct:cardyellow , name:'Quase não lembrei', color:'#FF922E'},{test:'zap-btn',funct:cardgreen , name:'Zap!' ,color:'#2FBE34'}]
     function resposta(){
-        console.log(props.card.virado)
+        console.log('oi')
         setcard(<div data-test="flashcard" className="pergunta-aberta">
         <div data-test = "flashcard-text">{props.card.answer}</div>
         <div className='container-botoes'>
         {cores.map((cor)=>
-            <button data-test={test} onClick={cor.funct} style={{backgroundColor:cor.color}}>{cor.name}</button>
+            <button data-test={cor.test} onClick={cor.funct} style={{backgroundColor:cor.color}}>{cor.name}</button>
             )}
         </div>
     </div>)
