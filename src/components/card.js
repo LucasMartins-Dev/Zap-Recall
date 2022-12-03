@@ -17,7 +17,7 @@ export default function Card (props){
 
     function clicacard(){
 
-        setcard(<div className="pergunta-aberta">
+        setcard(<div data-test="flashcard" className="pergunta-aberta">
         <div data-test = "flashcard-text">{props.card.question}</div>
         <img data-test="turn-btn" onClick={resposta} src={voltar}/>
     </div>)
