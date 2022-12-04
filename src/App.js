@@ -3,6 +3,7 @@ import './assets/css/style.css'
 import Card from './components/card';
 import React from 'react';
 import Concluido from './components/concluidos';
+import styled  from 'styled-components'
 
 export default function App() {
   const cards = [
@@ -19,11 +20,11 @@ export default function App() {
 
 console.log(cont)
   return (
-    <div className="screen-container">
-      <div className='logo-container'>
+    <Screencontainer>
+      <Logocontainer>
         <img src={logo}/>
         <h1>ZapRecall</h1>
-      </div>
+      </Logocontainer>
       {cards.map((card)=>
       <Card 
       cards={cards}
@@ -36,8 +37,39 @@ console.log(cont)
        cont={cont} 
        cards={cards}
        />
-    </div>
+    </Screencontainer>
   );
 }
 
+const Screencontainer = styled.div`
+ background-color: #FB6B6B;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 200px;
+`
+const Logocontainer = styled.div`
 
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px 0;
+ 
+ img {
+  width: 52px;
+}
+
+ h1 {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  color: #FFFFFF;
+  margin-left: 20px;
+}
+
+`
